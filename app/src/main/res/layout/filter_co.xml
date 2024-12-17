@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:sweet="http://schemas.android.com/apk/res-auto"
+    android:padding="24dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filter Tanggal"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#0A0A0A"/>
+
+    <RadioGroup
+        android:id="@+id/filterbulantanggal"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/bulanini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bulan Ini"/>
+        <RadioButton
+            android:id="@+id/bulanlalu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bulan Lalu"/>
+        <RadioButton
+            android:id="@+id/pilihtanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Tanggal"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/layouttanggal"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Awal"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#0A0A0A"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                sweet:boxCornerRadiusBottomEnd="4dp"
+                sweet:boxCornerRadiusBottomStart="4dp"
+                sweet:boxCornerRadiusTopEnd="4dp"
+                sweet:boxCornerRadiusTopStart="4dp"
+                sweet:boxStrokeColor="#0F4C81"
+                android:layout_toLeftOf="@id/buttonFilter"
+                sweet:endIconMode="custom">
+
+                <EditText
+                    android:id="@+id/tanggalawal"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:longClickable="false"
+                    android:focusable="false"
+                    android:layout_gravity="center_horizontal"
+                    android:autofillHints=""
+                    android:hint="Pilih Tanggal"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="16dp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:layout_alignParentRight="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Akhir"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#0A0A0A"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                sweet:boxCornerRadiusBottomEnd="4dp"
+                sweet:boxCornerRadiusBottomStart="4dp"
+                sweet:boxCornerRadiusTopEnd="4dp"
+                sweet:boxCornerRadiusTopStart="4dp"
+                sweet:boxStrokeColor="#0F4C81"
+                android:layout_toLeftOf="@id/buttonFilter"
+                sweet:endIconMode="custom">
+
+                <EditText
+                    android:id="@+id/tanggalakhir"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:longClickable="false"
+                    android:focusable="false"
+                    android:layout_gravity="center_horizontal"
+                    android:autofillHints=""
+                    android:hint="Pilih Tanggal"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="16dp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/lihat"
+        sweet:cornerRadius="5dp"
+        sweet:backgroundTint="#0F4C81"
+        android:text="Lihat"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/batal"
+        sweet:cornerRadius="5dp"
+        sweet:backgroundTint="#FFFFFF"
+        sweet:strokeColor="#E0E0E0"
+        sweet:strokeWidth="3dp"
+        android:text="Batal"
+        android:textColor="#0A0A0A"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
